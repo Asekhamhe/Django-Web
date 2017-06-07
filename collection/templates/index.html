@@ -4,7 +4,8 @@
   {% block content %}
     <h1>Hello World!</h1>
     <p>Django Web Application</p>
-    <p>{{number}} {% if number %} Number exists! {% endif %}</p>
-    <p>There are {{ number|apnumber }} dogs!</p>
-    <p>My name is {{name|title}}.</p>
+    {% for Profile in profiles %}
+      <h2>{{ Profile.name}}</h2>
+      <p>{{ Profile.description }}</p>
+    {% endfor %}
   {% endblock %}
